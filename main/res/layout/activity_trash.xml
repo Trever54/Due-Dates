@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mockapps.duedates.activities.TrashActivity">
+
+    <ListView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/task_list_view"
+        android:layout_above="@+id/restoreFab">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/restoreFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_revert"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/task_list_view"
+        android:layout_alignEnd="@+id/task_list_view" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mainMenuFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_agenda"
+        android:layout_below="@+id/task_list_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
